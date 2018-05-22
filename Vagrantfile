@@ -11,6 +11,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
     sysctl -w net.ipv4.ip_forward=1
-    yum install -y bind-utils net-tools traceroute
+    yum install -y curl bind-utils net-tools traceroute wget
   SHELL
 end
